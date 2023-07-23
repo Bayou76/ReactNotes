@@ -1,3 +1,4 @@
+import s from "./style.module.css";
 import { NoteApi } from "api/note-api";
 import { Header } from "components/Header/Header";
 import { useEffect } from "react";
@@ -19,7 +20,9 @@ export function App() {
   return (
     <div className="container-fluid">
       <Header />
-      <Outlet />
+      <div className={s.outlet_container}>
+        <Outlet />
+      </div>
     </div>
   );
 }
